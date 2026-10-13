@@ -549,7 +549,7 @@ userSettingsRoutes.post<{ secret: string }>(
     }
 
     const hostname = getHostname();
-    const jellyfinServer = new JellyfinAPI(hostname);
+    const jellyfinServer = new JellyfinMainAPI(hostname);
 
     try {
       const account = await jellyfinServer.authenticateQuickConnect(secret);
